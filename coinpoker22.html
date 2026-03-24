@@ -1,0 +1,1656 @@
+<!doctype html>
+<html lang="en" class="en" data-country="default">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinPoker - 100% Rakeback up to $2,000 USDT + 100 Free Spins</title>
+  <meta name="description"
+    content="Play at CoinPoker – the world's leading crypto casino platform. Get 100% Rakeback up to $2,000 USDT + 100 Free Spins. Instant withdrawals. 18+ Play responsibly." />
+
+  <!-- ============================================================
+       FAVICON – Replace with your own favicon image
+       ============================================================ -->
+  <link rel="icon" type="image/x-icon"
+    href="https://coinpoker.com/wp-content/themes/coinpoker/assets/favicon/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-style: none;
+      max-width: 100%;
+    }
+
+    a {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    /* ============================================================
+       ROOT SCALING – Uses vw-based font size so all rem units scale
+       ============================================================ */
+    html {
+      /* 1rem = 0.5208333vw at 1920px = 10px */
+      font-size: 0.5208333vw;
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Roboto", sans-serif;
+      /* ============================
+         BRAND COLOR – CoinPoker
+         ============================ */
+      background: #060610;
+      color: #fff;
+      height: 100%;
+      min-height: 100%;
+    }
+
+    /* Ensure the full-height flex chain holds at all screen sizes */
+    html,
+    body {
+      min-height: 100vh;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      /* ============================================================
+         BACKGROUND IMAGE – desktop/tablet bg lives on body so it
+         always fills the full viewport regardless of content height
+         ============================================================ */
+      background-image: url("https://media.istockphoto.com/id/2187351016/vector/casino-background-with-card-suits-pattern-luxury-vector-poker-casino-background.jpg?s=612x612&w=0&k=20&c=zgxN1zgscYVarXOQppxM7hkpUTPJtWDYwJxbnRVfej8=");
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-color: #060610;
+    }
+
+    /* ============================================================
+       LANGUAGE VISIBILITY RULES
+       ============================================================ */
+    html .en,
+    html .pl,
+    html .de,
+    html .it,
+    html .ro,
+    html .hu,
+    html .ru,
+    html .gr,
+    html .fr,
+    html .bg,
+    html .es,
+    html .pt,
+    html .cz,
+    html .dk,
+    html .no,
+    html .se,
+    html .sk {
+      display: none;
+    }
+
+    html.en .en {
+      display: block;
+    }
+
+    html.pl .pl {
+      display: block;
+    }
+
+    html.de .de {
+      display: block;
+    }
+
+    html.it .it {
+      display: block;
+    }
+
+    html.ro .ro {
+      display: block;
+    }
+
+    html.hu .hu {
+      display: block;
+    }
+
+    html.ru .ru {
+      display: block;
+    }
+
+    html.gr .gr {
+      display: block;
+    }
+
+    html.fr .fr {
+      display: block;
+    }
+
+    html.bg .bg {
+      display: block;
+    }
+
+    html.es .es {
+      display: block;
+    }
+
+    html.pt .pt {
+      display: block;
+    }
+
+    html.cz .cz {
+      display: block;
+    }
+
+    html.dk .dk {
+      display: block;
+    }
+
+    html.no .no {
+      display: block;
+    }
+
+    html.se .se {
+      display: block;
+    }
+
+    html.sk .sk {
+      display: block;
+    }
+
+    /* ============================================================
+       PRELOADER
+       ============================================================ */
+    .preloader {
+      width: 5em;
+      height: 5em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 999;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .preloader svg {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    html.hide .preloader {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       WRAPPER / LAYOUT
+       ============================================================ */
+    .wrapper {
+      /* Background is on body – wrapper is transparent flex container */
+      background: transparent;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .layout {
+      height: 100%;
+      min-height: 100vh;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      overflow: hidden;
+      min-height: 108rem;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .main {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 6.2rem 2rem 0;
+      margin: 0 auto;
+      max-width: 148rem;
+      min-height: 99rem;
+      width: 100%;
+    }
+
+    /* Language switcher removed – English only */
+
+    /* ============================================================
+       LOGO
+       ============================================================ */
+    .logo {
+      position: relative;
+      z-index: 6;
+      /* LOGO WIDTH – Adjust as needed */
+      width: 26.3rem;
+      display: block;
+      margin: 0 auto 6rem;
+    }
+
+    /* ============================================================
+       HERO ROW – side-by-side layout (desktop only)
+       ============================================================ */
+    .hero-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 4rem;
+      width: 100%;
+    }
+
+    .hero-image {
+      flex: 0 0 auto;
+      width: 55rem;
+      max-width: 55rem;
+      border-radius: 1.6rem;
+      overflow: hidden;
+      box-shadow: 0 0 4rem rgba(220, 0, 41, 0.25), 0 0.8rem 3rem rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 1.6rem;
+    }
+
+    /* ============================================================
+       MAIN INFO (Hero Area)
+       ============================================================ */
+    .main-info {
+      width: 100%;
+      max-width: 68.5rem;
+      min-height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       HEADLINE TEXTS
+       ============================================================ */
+    /* text-1: Headline */
+    .text-1 {
+      text-align: center;
+      font-size: 3.8rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 110%;
+      text-transform: uppercase;
+      /* Black drop-shadow for readability on gradient text */
+      filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #000);
+    }
+
+    .text-1 div {
+      background: linear-gradient(146deg,
+          #ff4d6a 4.15%,
+          #ff1a44 5.96%,
+          #dc0029 10.48%,
+          #ff4d6a 41.24%,
+          #ff8099 62.05%,
+          #dc0029 78.33%,
+          #9a001d 93.71%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* text-2: Large bonus amount "$2,000 USDT" */
+    .text-2 {
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      text-align: center;
+      /* Black stroke + red glow */
+      filter: drop-shadow(2px 2px 0px #000) drop-shadow(-1px -1px 0px #000) drop-shadow(0 0 2.4rem #dc0029);
+      font-size: 6.8rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 110%;
+      text-transform: uppercase;
+      margin: 1rem 0;
+    }
+
+    /* text-3: Free spins / sub-offer */
+    .text-3 {
+      color: #fff;
+      text-align: center;
+      font-size: 3.6rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 110%;
+      text-transform: uppercase;
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        0 0 1.5rem rgba(220, 0, 41, 0.5);
+      z-index: 99999;
+    }
+
+    /* text-4: Sub line */
+    .text-4 {
+      color: #fff;
+      text-align: center;
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        0.2rem 0.2rem 0 #000;
+      font-size: 4.2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      text-transform: uppercase;
+    }
+
+    /* text-5: Red accent line */
+    .text-5 {
+      color: #dc0029;
+      text-align: center;
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        0.2rem 0.2rem 0 #000;
+      font-size: 4.4rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+      margin-top: 2.3rem;
+    }
+
+    /* ============================================================
+       BONUS TEXT EFFECT
+       ============================================================ */
+    .bonus {
+      font-size: 8rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .text-effect span {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
+      position: relative;
+    }
+
+    .text-effect span::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* Black stroke shadow for readability */
+      text-shadow:
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000,
+        0.4rem 0.4rem 0 #000;
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .text-effect span::after {
+      content: attr(data-text);
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* Red gradient to match CoinPoker brand */
+      background: linear-gradient(180deg, #ff4d6a 23.61%, #dc0029 77.08%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       CTA BUTTON
+       ============================================================ */
+    .btn-wrap {
+      margin: 6rem auto 0;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 6rem;
+      /* ============================
+         BUTTON COLOR – CoinPoker
+         ============================ */
+      background: #dc0029;
+      width: 38.7rem;
+      height: 10.5rem;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      animation: btn-pulse 1.5s infinite ease-in-out;
+      will-change: transform;
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      z-index: 3;
+    }
+
+    .btn::after {
+      background: #fff;
+      content: "";
+      height: 200%;
+      left: -15rem;
+      opacity: 0.2;
+      position: absolute;
+      top: -4rem;
+      transform: rotate(35deg);
+      transition: all 0.6s ease-in-out;
+      width: 4rem;
+      z-index: 0;
+      animation: lineMoving 3.4s ease-in-out infinite;
+    }
+
+    @keyframes lineMoving {
+      0% {
+        left: -15rem;
+      }
+
+      50% {
+        left: 120%;
+      }
+
+      100% {
+        left: 120%;
+      }
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      /* ============================
+         BUTTON TEXT COLOR – CoinPoker
+         ============================ */
+      color: #fff;
+      text-align: center;
+      font-size: 3.6rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .btn span.btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    @media (hover: hover) {
+      .btn:hover {
+        background: #ff1a44;
+        animation-play-state: paused;
+      }
+    }
+
+    @keyframes btn-pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* ============================================================
+       T&C LINK
+       ============================================================ */
+    .terms {
+      display: flex;
+      width: fit-content;
+      margin: 1.8rem auto 0;
+      position: relative;
+      z-index: 3;
+      color: #fff;
+      text-align: center;
+      font-size: clamp(12px, 1.8rem, 1.8rem);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1;
+      border-bottom: 0.2rem solid rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border 0.3s ease;
+      cursor: pointer;
+      text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+
+    @media (hover: hover) {
+      .terms:hover {
+        border-bottom: 0.2rem solid #fff;
+      }
+    }
+
+    /* ============================================================
+       PAYMENT METHODS IN FOOTER
+       ============================================================ */
+    .footer__payment {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .footer__payment img {
+      height: 26px;
+      width: auto;
+      max-width: 54px;
+      object-fit: contain;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+      filter: none;
+    }
+
+    .footer__payment img.invert-white {
+      filter: brightness(0) invert(1);
+    }
+
+    .footer__payment img:hover {
+      opacity: 1;
+    }
+
+    .footer__copy {
+      font-family: "Open Sans", sans-serif;
+      color: rgba(255, 255, 255, 0.3);
+      text-align: center;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ============================================================
+       STEPS SECTION
+       ============================================================ */
+    .steps {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 8rem auto 0;
+    }
+
+    .steps__row {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.3rem;
+      margin: 0 auto;
+    }
+
+    .steps__item {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+      will-change: transform;
+    }
+
+    .steps__item.active {
+      animation: scaleUp 1.5s infinite ease-in-out forwards;
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .steps__img {
+      width: 6rem;
+      margin-right: 1.5rem;
+    }
+
+    .steps__arrow {
+      width: 2.1rem;
+    }
+
+    .steps__text {
+      position: relative;
+      display: inline-block;
+      z-index: 3;
+    }
+
+    .steps__text div {
+      color: #fff;
+      text-align: center;
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        0 0 1.5rem #dc0029;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 110%;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       DECORATIVE FLOATING ELEMENTS
+       ============================================================ */
+    .bg-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .decor {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    /* Character image */
+    .decor_character {
+      right: -1rem;
+      top: 13.4rem;
+      width: 151rem;
+      /* Hidden on desktop/tablet – show only on mobile */
+      display: none;
+    }
+
+    /* Floating decorative casino elements – hidden by default, mobile only */
+    .elem1,
+    .elem2,
+    .elem3,
+    .elem4,
+    .elem5,
+    .elem6 {
+      display: none;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    @keyframes floatA {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-1.5rem) scale(0.95);
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes floatB {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(2rem) scale(0.95);
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes floatC {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-2rem) scale(1.05);
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes floatD {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-1.2rem) scale(0.95);
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* ============================================================
+       PARTICLES CANVAS
+       ============================================================ */
+    #particles-js {
+      position: absolute;
+      width: 192rem;
+      height: 108rem;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      z-index: 1;
+      pointer-events: none;
+      top: 0;
+      max-width: 192rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s linear;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      padding: 3rem 0;
+      position: relative;
+      z-index: 3;
+    }
+
+    .footer__text {
+      font-family: "Open Sans", sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    /* ============================================================
+       RESPONSIVE BREAKPOINTS
+       ============================================================ */
+    @media (max-width: 1300px) {
+      html {
+        font-size: 0.625vw;
+      }
+
+      html,
+      body {
+        min-height: 100vh;
+        height: 100%;
+      }
+
+      .wrapper {
+        min-height: 100vh;
+        flex-grow: 1;
+      }
+
+      .layout {
+        min-height: 100vh;
+        flex-grow: 1;
+      }
+
+      .elem1 {
+        left: 9rem;
+      }
+
+      .elem2 {
+        left: 64rem;
+      }
+
+      .elem3 {
+        left: 67rem;
+      }
+
+      .elem4 {
+        right: 20rem;
+      }
+
+      .elem5 {
+        left: -8rem;
+      }
+
+      .elem6 {
+        left: 71rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+
+      html,
+      body {
+        min-height: 100vh;
+        height: 100%;
+      }
+
+      .wrapper {
+        min-height: 100vh;
+        flex-grow: 1;
+      }
+
+      .layout {
+        min-height: 100vh;
+        flex-grow: 1;
+      }
+
+      .lang_switcher_outer {
+        top: 3rem;
+        font-size: 120%;
+      }
+
+      .decor_character {
+        right: -24rem;
+        top: 29.4rem;
+        width: 124rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      html {
+        font-size: 1.5625vw;
+      }
+
+      html,
+      body {
+        min-height: 100vh;
+        height: 100%;
+      }
+
+      .wrapper {
+        min-height: 100vh;
+        flex-grow: 1;
+      }
+
+      .layout {
+        min-height: 100vh;
+        flex-grow: 1;
+      }
+
+      /* MOBILE BACKGROUND – switch bg image on body for mobile */
+      body {
+        background-image: url("https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cp111.jpg");
+        background-size: cover;
+        background-position: top center;
+        background-color: #060610;
+      }
+
+      /* Show floating elements only on mobile */
+      .decor_character {
+        display: block;
+        right: unset;
+        top: 74rem;
+        width: 100rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+      }
+
+      .elem4 {
+        display: block;
+        top: 10rem;
+        width: 13.8rem;
+        right: -2rem;
+        left: auto;
+        animation: floatA 4.5s ease-in-out 0.4s infinite;
+      }
+
+      .elem5 {
+        display: block;
+        left: -3rem;
+        width: 16.7rem;
+        animation: floatD 4.5s ease-in-out 0.4s infinite;
+      }
+
+      .elem6 {
+        display: block;
+        top: 108rem;
+        width: 20.9rem;
+        left: 50rem;
+        animation: floatA 4.5s ease-in-out 0.4s infinite;
+      }
+
+      .btn {
+        width: 42rem;
+      }
+
+      .steps {
+        background: unset;
+        max-width: 100%;
+        height: auto;
+        margin: 1rem auto 0;
+        width: fit-content;
+      }
+
+      .steps__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .steps__arrow {
+        display: none;
+      }
+
+      .elem1,
+      .elem2,
+      .elem3 {
+        display: none;
+      }
+
+      .elem6 {
+        top: 108rem;
+        width: 20.9rem;
+        left: 50rem;
+      }
+
+      .elem5 {
+        left: -3rem;
+        width: 16.7rem;
+      }
+
+      .elem4 {
+        top: 10rem;
+        width: 13.8rem;
+        right: -2rem;
+      }
+
+      .main-info {
+        max-width: 100%;
+        min-height: 99.5rem;
+      }
+
+      .hero-image {
+        display: none;
+      }
+
+      .hero-row {
+        flex-direction: column;
+      }
+
+      .text-1 {
+        font-size: 2.8rem;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .text-2 {
+        font-size: 6rem;
+      }
+
+      .text-3 {
+        font-size: 2.8rem;
+      }
+
+      .text-3 br {
+        display: none;
+      }
+
+      .logo {
+        margin-bottom: 2.5rem;
+      }
+
+      .btn-wrap {
+        margin: 2.6rem auto 0;
+      }
+
+      .steps__text div {
+        font-size: 2.5rem;
+      }
+
+      .main {
+        padding-top: 3.3rem;
+      }
+
+      .main-content {
+        min-height: auto;
+      }
+
+      .footer {
+        margin-top: 0;
+        padding: 2rem 0;
+      }
+
+      .decor_character {
+        right: unset;
+        top: 74rem;
+        width: 100rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+      }
+
+      #particles-js {
+        height: 114rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .lang_switcher_outer {
+        font-size: 130%;
+        right: 3rem;
+        top: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ============================================================
+       PRELOADER
+       ============================================================ -->
+  <div class="preloader">
+    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="25" cy="25" r="20" stroke="#dc0029" stroke-width="4" stroke-dasharray="100" stroke-dashoffset="60"
+        stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <!-- ============================================================
+       MAIN WRAPPER
+       ============================================================ -->
+  <div class="wrapper">
+    <div class="layout">
+      <!-- Particles Background -->
+      <div id="particles-js"></div>
+
+      <!-- Language Switcher removed – English only -->
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="main">
+          <!-- ============================================================
+               LOGO – Replace with your own logo image or SVG
+               ============================================================ -->
+          <!-- ============================================================
+               LOGO – To rebrand: replace src with your own logo file
+               ============================================================ -->
+          <a href="{offer}" class="logo" id="siteLogoLink" target="_blank" rel="noopener noreferrer"
+            aria-label="CoinPoker Home">
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/coinpoker%20logo.png"
+              alt="CoinPoker Logo" />
+          </a>
+
+          <!-- Main Info / Hero -->
+          <div class="hero-row">
+            <div class="main-info">
+              <!-- Decorative floating elements (casino themed) -->
+              <!-- ============================================================
+                 DECORATION IMAGES – Replace URLs with your own decorative images
+                 ============================================================ -->
+              <img class="elem1" src="https://my-promo7.com/welcome/img/webp/elem1.webp" alt="" aria-hidden="true" />
+              <img class="elem2" src="https://my-promo7.com/welcome/img/webp/elem2.webp" alt="" aria-hidden="true" />
+              <img class="elem3" src="https://my-promo7.com/welcome/img/webp/elem3.webp" alt="" aria-hidden="true" />
+              <img class="elem4" src="https://my-promo7.com/welcome/img/webp/elem4.webp" alt="" aria-hidden="true" />
+              <img class="elem5" src="https://my-promo7.com/welcome/img/webp/elem5.webp" alt="" aria-hidden="true" />
+              <img class="elem6" src="https://my-promo7.com/welcome/img/webp/elem6.webp" alt="" aria-hidden="true" />
+
+              <!-- ========================================================
+                 HEADLINE LINE 1 – "UNLOCK THE ULTIMATE WELCOME BONUS!"
+                 Change text inside each language <div> to rebrand
+                 ======================================================== -->
+              <h1 class="text-1">
+                <div class="en">100% RAKEBACK UP TO</div>
+                <div class="pl">100% RAKEBACK DO</div>
+                <div class="de">100% RAKEBACK BIS ZU</div>
+                <div class="it">100% RAKEBACK FINO A</div>
+                <div class="ro">100% RAKEBACK PÂNĂ LA</div>
+                <div class="hu">100% RAKEBACK AKÁR</div>
+                <div class="ru">100% РЕЙКБЭК ДО</div>
+                <div class="gr">100% RAKEBACK ΕΩΣ</div>
+                <div class="fr">100% RAKEBACK JUSQU'À</div>
+                <div class="bg">100% RAKEBACK ДО</div>
+                <div class="pt">100% RAKEBACK ATÉ</div>
+              </h1>
+
+              <!-- ========================================================
+                 HEADLINE LINE 2 – Large bonus amount (dynamic)
+                 ======================================================== -->
+              <div class="bonus text-2 text-effect">
+                <span class="bonus-max">$2,000 USDT</span>
+              </div>
+
+              <!-- ========================================================
+                 HEADLINE LINE 3 – Free Spins
+                 Change "250 FREE SPINS" or other text to rebrand
+                 ======================================================== -->
+              <p class="text-3">
+                <!-- EN -->
+                <span class="en">
+                  + <strong>100 FREE SPINS</strong>
+                  <br />Crypto withdrawals in
+                  under 10 minutes!
+                </span>
+                <!-- PL -->
+                <span class="pl">+ <strong>100 FREE SPINÓW</strong><br />Wypłaty krypto w
+                  mniej niż 10 min!</span>
+                <!-- DE -->
+                <span class="de">+ <strong>100 FREISPIELE</strong><br />Krypto-Auszahlungen in
+                  unter 10 Min!</span>
+                <!-- IT -->
+                <span class="it">+ <strong>100 FREE SPIN</strong><br />Prelievi Crypto in meno
+                  di 10 min!</span>
+                <!-- RO -->
+                <span class="ro">+ <strong>100 ROTIRI GRATUITE</strong><br />Retrageri Crypto
+                  în sub 10 min!</span>
+                <!-- HU -->
+                <span class="hu">+ <strong>100 INGYENES PÖRGETÉS</strong><br />Krypto
+                  kifizetések 10 percen belül!</span>
+                <!-- RU -->
+                <span class="ru">+ <strong>100 БЕСПЛАТНЫХ ВРАЩЕНИЙ</strong><br />Крипто-выплаты менее чем за 10
+                  мин!</span>
+                <!-- GR -->
+                <span class="gr">+ <strong>100 ΔΩΡΕΑΝ ΠΕΡΙΣΤΡΟΦΕΣ</strong><br />Αναλήψεις
+                  κρύπτο σε λιγότερο από 10 λεπτά!</span>
+                <!-- FR -->
+                <span class="fr">+ <strong>100 TOURS GRATUITS</strong><br />Retraits crypto en
+                  moins de 10 min!</span>
+                <!-- BG -->
+                <span class="bg">+ <strong>100 БЕЗПЛАТНИ ЗАВЪРТАНИЯ</strong><br />Крипто
+                  тегления за под 10 мин!</span>
+                <!-- PT -->
+                <span class="pt">+ <strong>100 GIROS GRÁTIS</strong><br />Saques Crypto em
+                  menos de 10 min!</span>
+              </p>
+
+              <!-- ========================================================
+                 CTA BUTTON – "GET BONUS"
+                 Change href to your signup/registration URL
+                 Change button text inside each language span to rebrand
+                 ======================================================== -->
+              <div class="btn-wrap">
+                <a href="{offer}" class="btn" id="mainCtaButton" target="_blank" rel="noopener noreferrer">
+                  <span class="btn-primary">
+                    <span class="en">GET STARTED</span>
+                    <span class="pl">ZACZNIJ TERAZ</span>
+                    <span class="de">JETZT STARTEN</span>
+                    <span class="it">INIZIA ORA</span>
+                    <span class="ro">ÎNCEPE ACUM</span>
+                    <span class="hu">KEZDJ EL</span>
+                    <span class="ru">НАЧАТЬ</span>
+                    <span class="gr">ΞΕΚΙΝΑ ΤΩΡΑ</span>
+                    <span class="fr">COMMENCER</span>
+                    <span class="bg">ЗАПОЧНИ СЕГА</span>
+                    <span class="pt">COMEÇAR AGORA</span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- ========================================================
+                 T&C LINK – "Bonus T&C's"
+                 Change href to your terms URL
+                 ======================================================== -->
+              <a href="{offer}" class="terms" id="termsLink" target="_blank" rel="noopener noreferrer">
+                <span class="en">Bonus T&amp;C's | 18+ | Play Responsibly |
+                  coinpoker.com</span>
+                <span class="pl">Warunki bonusu | 18+ | Graj odpowiedzialnie</span>
+                <span class="de">Bonus-AGB | 18+ | Verantwortungsvoll spielen</span>
+                <span class="it">Termini e Condizioni del Bonus | 18+</span>
+                <span class="ro">Termenii și Condițiile bonusurilor | 18+</span>
+                <span class="hu">Bónusz ÁSZF | 18+</span>
+                <span class="ru">Бонусные Условия | 18+</span>
+                <span class="gr">Όροι μπόνους | 18+</span>
+                <span class="fr">T&amp;C du bonus | 18+ | Jouez responsablement</span>
+                <span class="bg">Условия на бонуса | 18+ | Играйте отговорно</span>
+                <span class="pt">T&amp;C do bônus | 18+ | Jogue com responsabilidade</span>
+              </a>
+            </div>
+            <!-- /.main-info -->
+
+            <!-- Hero Image – desktop only, hidden on mobile -->
+            <div class="hero-image">
+              <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cpoker1.jpg"
+                alt="CoinPoker Promotion" />
+            </div>
+          </div>
+          <!-- /.hero-row -->
+
+          <!-- ========================================================
+               STEPS SECTION – "How to get the bonus"
+               Change step text to rebrand
+               ======================================================== -->
+          <div class="steps">
+            <div class="steps__row">
+              <!-- Step 1 -->
+              <div class="steps__item show-anim" id="step1">
+                <!-- Replace this icon image with your own step icon -->
+                <img class="steps__img" src="https://my-promo7.com/welcome/img/webp/step-img.webp" alt="Step 1 icon" />
+                <div class="steps__text">
+                  <div class="en">1. Sign Up Free</div>
+                  <div class="pl">1. Zarejestruj się</div>
+                  <div class="de">1. Kostenlos registrieren</div>
+                  <div class="it">1. Iscriviti Gratis</div>
+                  <div class="ro">1. Înregistrează-te</div>
+                  <div class="hu">1. Regisztrálj</div>
+                  <div class="ru">1. Зарегистрируйся</div>
+                  <div class="gr">1. Εγγραφή</div>
+                  <div class="fr">1. Inscription gratuite</div>
+                  <div class="bg">1. Регистрирай се безплатно</div>
+                  <div class="pt">1. Cadastre-se grátis</div>
+                </div>
+              </div>
+
+              <!-- Arrow -->
+              <svg class="steps__arrow" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 7h19M14 1l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+              <!-- Step 2 -->
+              <div class="steps__item show-anim" id="step2">
+                <img class="steps__img" src="https://my-promo7.com/welcome/img/webp/step-img.webp" alt="Step 2 icon" />
+                <div class="steps__text">
+                  <div class="en">2. Deposit Crypto</div>
+                  <div class="pl">2. Wpłać kryptowalutę</div>
+                  <div class="de">2. Krypto einzahlen</div>
+                  <div class="it">2. Deposita Crypto</div>
+                  <div class="ro">2. Depozitează Crypto</div>
+                  <div class="hu">2. Krypto befizetés</div>
+                  <div class="ru">2. Пополни криптой</div>
+                  <div class="gr">2. Κατάθεση Crypto</div>
+                  <div class="fr">2. Déposer en crypto</div>
+                  <div class="bg">2. Депозирай крипто</div>
+                  <div class="pt">2. Depositar cripto</div>
+                </div>
+              </div>
+
+              <!-- Arrow -->
+              <svg class="steps__arrow" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 7h19M14 1l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+              <!-- Step 3 -->
+              <div class="steps__item show-anim" id="step3">
+                <img class="steps__img" src="https://my-promo7.com/welcome/img/webp/step-img.webp" alt="Step 3 icon" />
+                <div class="steps__text">
+                  <div class="en">3. Claim Rakeback</div>
+                  <div class="pl">3. Odbierz Rakeback</div>
+                  <div class="de">3. Rakeback beanspruchen</div>
+                  <div class="it">3. Reclama Rakeback</div>
+                  <div class="ro">3. Revendică Rakeback</div>
+                  <div class="hu">3. Igényelje a Rakebacket</div>
+                  <div class="ru">3. Получи Рейкбэк</div>
+                  <div class="gr">3. Διεκδίκησε Rakeback</div>
+                  <div class="fr">3. Réclamer le Rakeback</div>
+                  <div class="bg">3. Вземи Rakeback</div>
+                  <div class="pt">3. Reivindicar Rakeback</div>
+                </div>
+              </div>
+
+              <!-- Arrow -->
+              <svg class="steps__arrow" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 7h19M14 1l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+              <!-- Step 4 -->
+              <div class="steps__item show-anim" id="step4">
+                <img class="steps__img" src="https://my-promo7.com/welcome/img/webp/step-img.webp" alt="Step 4 icon" />
+                <div class="steps__text">
+                  <div class="en">4. Play Poker &amp; Win!</div>
+                  <div class="pl">4. Graj w pokera i wygrywaj!</div>
+                  <div class="de">4. Poker spielen &amp; Gewinnen!</div>
+                  <div class="it">4. Gioca a Poker e Vinci!</div>
+                  <div class="ro">4. Joacă Poker &amp; Câștigă!</div>
+                  <div class="hu">4. Játssz Pokert &amp; Nyerj!</div>
+                  <div class="ru">4. Играй в покер и Выигрывай!</div>
+                  <div class="gr">4. Παίξε Poker &amp; Κέρδισε!</div>
+                  <div class="fr">4. Jouez au Poker &amp; Gagnez!</div>
+                  <div class="bg">4. Играйте Покер и Спечелете!</div>
+                  <div class="pt">4. Jogue Poker &amp; Ganhe!</div>
+                </div>
+              </div>
+            </div>
+            <!-- /.steps__row -->
+          </div>
+          <!-- /.steps -->
+        </div>
+        <!-- /.main -->
+      </main>
+
+      <!-- ============================================================
+           FOOTER
+           Change copyright text to rebrand
+           ============================================================ -->
+      <footer class="footer">
+        <div class="footer__payment">
+          <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg" alt="Bitcoin" title="Bitcoin" />
+          <img src="https://cryptologos.cc/logos/ethereum-eth-logo.svg" alt="Ethereum" title="Ethereum" />
+          <img src="https://cryptologos.cc/logos/tether-usdt-logo.svg" alt="USDT" title="USDT" />
+          <img src="https://cryptologos.cc/logos/solana-sol-logo.svg" alt="Solana" title="Solana" />
+          <img src="https://cryptologos.cc/logos/bnb-bnb-logo.svg" alt="BNB" title="BNB" />
+          <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg" alt="Dogecoin" title="Dogecoin" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+            title="Mastercard" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/960px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png?_=20240313022811"
+            alt="Visa" title="Visa" class="invert-white" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay"
+            title="Google Pay" />
+        </div>
+        <p class="footer__text">
+          &copy; <span id="year"></span> CoinPoker – All Rights Reserved | 18+
+          | Play Responsibly
+        </p>
+        <p class="footer__text" style="font-size: 1.2rem; margin-top: 1rem">
+          18+ | Play Responsibly | coinpoker.com
+        </p>
+      </footer>
+    </div>
+    <!-- /.layout -->
+  </div>
+  <!-- /.wrapper -->
+
+  <!-- ============================================================
+       PARTICLES.JS (CDN - Lightweight particle effects)
+       ============================================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const html = document.querySelector("html");
+      const bonusMaxEls = [...document.querySelectorAll(".bonus-max")];
+
+      // ============================================================
+      // LANGUAGE – English only (switcher removed)
+      // ============================================================
+      const listOfLang = [
+        "en",
+        "pl",
+        "de",
+        "it",
+        "ro",
+        "gr",
+        "hu",
+        "pt",
+        "bg",
+        "ru",
+        "fr",
+        "es",
+        "cz",
+        "dk",
+        "no",
+        "se",
+        "sk",
+      ];
+      const countryToLang = {
+        en: "en",
+        pl: "pl",
+        de: "de",
+        it: "it",
+        ro: "ro",
+        el: "gr",
+        hu: "hu",
+        pt: "pt",
+        bg: "bg",
+        default: "en",
+      };
+
+      // ============================================================
+      // BONUS AMOUNTS BY COUNTRY
+      // Change amounts or add/remove countries as needed
+      // ============================================================
+      const bonusData = {
+        ca: { countWB: "$2,000 USDT" },
+        ch: { countWB: "$2,000 USDT" },
+        nz: { countWB: "$2,000 USDT" },
+        pl: { countWB: "$2,000 USDT" },
+        ro: { countWB: "$2,000 USDT" },
+        dk: { countWB: "$2,000 USDT" },
+        hu: { countWB: "$2,000 USDT" },
+        se: { countWB: "$2,000 USDT" },
+        no: { countWB: "$2,000 USDT" },
+        default: { countWB: "$2,000 USDT" },
+      };
+
+      // Get country from html data attribute (set server-side if needed)
+      const country = html.getAttribute("data-country") || "default";
+
+      // Update bonus amount display
+      bonusMaxEls.forEach((el) => {
+        el.textContent = bonusData[country]
+          ? bonusData[country].countWB
+          : bonusData.default.countWB;
+      });
+
+      // ============================================================
+      // PRELOADER HIDE
+      // ============================================================
+      const hidePreloader = () => {
+        html.classList.remove("hide");
+        setTimeout(() => html.classList.add("hide"), 1000);
+      };
+
+      // ============================================================
+      // LANGUAGE INIT – force English class on html element
+      // ============================================================
+      function initLanguage() {
+        const [userLangCode] = (
+          navigator.language ||
+          navigator.userLanguage ||
+          "en"
+        ).split("-");
+        const initialLang =
+          countryToLang[userLangCode] || countryToLang.default;
+        listOfLang.forEach((l) => html.classList.remove(l));
+        html.classList.add(initialLang);
+        html.setAttribute("data-lang", initialLang);
+      }
+
+      // ============================================================
+      // TEXT EFFECT – Adds data-text attribute for CSS ::before/::after
+      // ============================================================
+      document.querySelectorAll(".text-effect span").forEach((el) => {
+        el.setAttribute("data-text", el.textContent);
+      });
+
+      // ============================================================
+      // STEPS ANIMATION – Cycles through steps with active highlight
+      // ============================================================
+      const steps = document.querySelectorAll(".show-anim");
+      let currentIndex = 0;
+
+      function activateStep(index) {
+        steps.forEach((step, i) =>
+          step.classList.toggle("active", i === index),
+        );
+      }
+
+      function startAnimation() {
+        activateStep(currentIndex);
+        currentIndex = (currentIndex + 1) % steps.length;
+        setTimeout(startAnimation, 1500);
+      }
+
+      setTimeout(() => startAnimation(), 1000);
+
+      // ============================================================
+      // YEAR IN FOOTER
+      // ============================================================
+      document.querySelector("#year").innerText = new Date().getFullYear();
+
+      // ============================================================
+      // PARTICLES.JS CONFIGURATION
+      // ============================================================
+      if (typeof particlesJS !== "undefined") {
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 150,
+              density: { enable: true, value_area: 3000 },
+            },
+            color: { value: "#fdd601" },
+            shape: {
+              type: "circle",
+              stroke: { width: 0, color: "#000000" },
+              polygon: { nb_sides: 3 },
+            },
+            opacity: {
+              value: 0.9,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false,
+              },
+            },
+            size: {
+              value: 5,
+              random: true,
+              anim: { enable: true, speed: 3, size_min: 0, sync: false },
+            },
+            line_linked: {
+              enable: false,
+              distance: 700,
+              color: "#FFF",
+              opacity: 0.4,
+              width: 2,
+            },
+            move: {
+              enable: true,
+              speed: 2.5,
+              direction: "top",
+              random: true,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: { enable: false, rotateX: 600, rotateY: 1200 },
+            },
+          },
+          interactivity: {
+            detect_on: "window",
+            events: {
+              onhover: { enable: false, mode: "repulse" },
+              onclick: { enable: false, mode: "repulse" },
+              resize: true,
+            },
+            modes: {
+              grab: { distance: 1400, line_linked: { opacity: 0.1 } },
+              bubble: {
+                distance: 400,
+                size: 6,
+                duration: 0.3,
+                opacity: 1,
+                speed: 3,
+              },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 },
+            },
+          },
+          retina_detect: true,
+        });
+      }
+
+      // Init
+      hidePreloader();
+      initLanguage();
+    });
+  </script>
+</body>
+
+</html>
