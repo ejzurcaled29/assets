@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>CoinCasino — 200% Bonus up to $30,000 + 150 Free Spins</title>
+    <meta
+      name="description"
+      content="Play at CoinCasino — Instant crypto withdrawals in under 10 minutes. Plus 200% Bonus up to $30,000 + 150 Free Spins. 18+ Play responsibly."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cc-favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cc-favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      :root {
+        --primary: #8B5CF6;
+        --primary-dark: #6D28D9;
+        --primary-glow: rgba(139, 92, 246, 0.4);
+        --bg-dark: #040408;
+        --bg-card: #0F0F1A;
+        --bg-card-light: #161228;
+        --text-white: #ffffff;
+        --text-gray: #b8b8cc;
+        --text-muted: #6b6b85;
+        --border-color: rgba(139, 92, 246, 0.18);
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-white);
+        font-size: 18px;
+        line-height: 1.65;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: var(--primary);
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 800;
+        line-height: 1.25;
+        color: var(--text-white);
+      }
+
+      h1 {
+        font-size: clamp(22px, 4vw, 32px);
+        margin-top: 0;
+        margin-bottom: 0.75em;
+      }
+
+      h1 span {
+        background: linear-gradient(135deg, #ffffff 0%, var(--primary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      h2 {
+        font-size: clamp(20px, 3vw, 28px);
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+      }
+
+      h3 {
+        font-size: clamp(18px, 2.5vw, 24px);
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+      }
+
+      h4 {
+        font-size: clamp(16px, 2.5vw, 20px);
+        font-weight: 500;
+        color: var(--text-gray);
+      }
+
+      p {
+        margin: 14px 0;
+        color: var(--text-gray);
+      }
+
+      ul {
+        margin-bottom: 26px;
+        padding-left: 0;
+      }
+
+      li {
+        margin-top: 18px;
+        line-height: 1.5;
+        color: var(--text-gray);
+      }
+
+      li b {
+        color: var(--text-white);
+      }
+
+      /* Header */
+      header {
+        width: 100%;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid var(--border-color);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        position: sticky;
+        top: 0;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        max-width: 750px;
+        margin: 0 auto;
+      }
+
+      .header-inner .logo {
+        height: clamp(32px, 8vw, 45px);
+        width: auto;
+      }
+
+      .header-inner .menu {
+        margin-top: clamp(5px, 1vw, 0px);
+        width: clamp(48px, 10vw, 90px);
+        padding: clamp(11px, 2vw, 20px);
+        display: block;
+        cursor: pointer;
+        transition: padding 0.3s ease;
+      }
+
+      /* Main */
+      main {
+        flex: 1;
+        padding: 24px 20px 100px;
+        width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .section-block {
+        margin-bottom: 48px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+      }
+
+      .section-block:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .main-img {
+        margin-top: 16px;
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+        transition:
+          filter 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .main-img:hover {
+        filter: brightness(1.08);
+        transform: scale(1.01);
+      }
+
+      .signup-cta-img {
+        max-width: 360px;
+      }
+
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .games-grid img {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+      }
+
+      .payment-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+        align-items: center;
+        justify-items: center;
+        margin-top: 16px;
+        padding: 20px;
+        background: var(--bg-card);
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+      }
+
+      .payment-grid img {
+        height: 28px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        filter: brightness(0.9);
+      }
+
+      .payment-grid img[alt="Apple Pay"] {
+        filter: invert(1);
+      }
+
+      .signup-btn {
+        display: inline-block;
+        padding: 18px 48px;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        color: #000;
+        font-size: clamp(16px, 3vw, 20px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        box-shadow: 0 6px 25px var(--primary-glow);
+        transition: all 0.2s ease;
+      }
+
+      .signup-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 35px var(--primary-glow);
+        color: #000;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto 16px;
+      }
+
+      /* Highlight list box */
+      .list {
+        background: linear-gradient(
+          145deg,
+          rgba(139, 92, 246, 0.06),
+          rgba(0, 0, 0, 0.5)
+        );
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+        border-bottom: 3px solid var(--primary-dark);
+        margin-bottom: 20px;
+      }
+
+      .list h2 {
+        margin-top: 0;
+      }
+
+      .list ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .list li {
+        padding-left: 8px;
+        text-indent: 0;
+      }
+
+      /* Sticky CTA */
+      .claimCoins {
+        position: sticky;
+        z-index: 10;
+        bottom: 16px;
+        margin: 32px 0;
+        transition: transform 0.2s;
+      }
+
+      .claimCoins:hover {
+        transform: scale(1.03);
+      }
+
+      .claimCoinsContainer {
+        line-height: 1.3;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        box-shadow: 0 6px 0 0 #1a0e35;
+        border: 0;
+        color: #000;
+        border-radius: 50px;
+        font-size: clamp(1em, 4vw, 1.5em);
+        text-align: center;
+        padding: clamp(14px, 2vw, 20px) clamp(20px, 4vw, 32px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.2s;
+      }
+
+      .claimLinkWrapper:hover .claimCoinsContainer {
+        box-shadow:
+          0 6px 0 0 #1a0e35,
+          0 8px 30px var(--primary-glow);
+      }
+
+      .claimLinkWrapper:active .claimCoinsContainer {
+        transform: translateY(2px);
+        box-shadow: 0 4px 0 0 #1a0e35;
+      }
+
+      .disclaimer {
+        margin: 40px 0;
+        padding: 20px;
+        background: var(--bg-card);
+        border-radius: 10px;
+        border-left: 4px solid var(--primary-dark);
+      }
+
+      .disclaimer p {
+        font-size: 15px;
+        margin: 0;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        background: var(--bg-card);
+        color: var(--text-gray);
+        padding: 30px 20px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .footer-logo-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        max-width: 750px;
+        margin: 0 auto 20px;
+      }
+
+      .footer-logo-wrapper img {
+        height: 40px;
+        width: auto;
+      }
+
+      .footer a {
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .footer a p {
+        margin: 8px 0;
+        color: inherit;
+        font-size: 14px;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 16px;
+      }
+
+      @media (min-width: 768px) {
+        main {
+          padding: 32px 24px 80px;
+        }
+
+        .header-inner {
+          padding: 14px 24px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .header-inner .menu {
+          margin-top: 0;
+          width: clamp(48px, 10.4vw, 59px);
+          max-width: 35%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="{offer}" target="_blank">
+          <img
+            src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/coincasino.png"
+            class="logo"
+            decoding="async"
+            alt="CoinCasino"
+          />
+        </a>
+        <a href="{offer}" target="_blank">
+          <img
+            src="https://american-deals.com/deals/CrownCoinCasinoLP_4/assets/menu1.webp"
+            class="menu"
+            decoding="async"
+            alt="Menu icon"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>
+          <span>COINCASINO: 200% BONUS UP TO $30,000 + 150 FREE SPINS</span>
+        </h1>
+
+        <p>
+          Welcome to CoinCasino — the casino that actually pays out fast. Get a
+          200% welcome bonus up to $30,000 plus 150 Free Spins. Mobile · Live ·
+          Slots. Instant crypto cashouts in under 10 minutes — no KYC delays, no waiting days.
+        </p>
+
+        <section class="section-block">
+          <div class="text-center">
+            <a href="{offer}" target="_blank">
+              <img
+                src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cp-newbanner.png"
+                class="main-img"
+                alt="CoinCasino gaming platform"
+              />
+            </a>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2>The Welcome Offer</h2>
+          <p>
+            When you join CoinCasino, your account starts loaded. They
+            provide the bonus; you provide the strategy.
+          </p>
+          <ul style="padding-left: 24px">
+            <li>
+              <b>200% Welcome Bonus:</b> Boost your first deposit by 200% up to
+              $30,000 and start winning big from day one.
+            </li>
+            <li>
+              <b>150 Free Spins:</b> Get 150 Free Spins to play
+              your favorite slots.
+            </li>
+            <li>
+              <b>Instant Crypto Cashouts:</b> Lightning-fast withdrawals with crypto
+              and traditional payment methods.
+            </li>
+            <li>
+              <b>Licensed &amp; Secure:</b> Play with confidence on a trusted
+              platform with 24/7 live support.
+            </li>
+          </ul>
+          <div class="text-center">
+            <a href="{offer}" target="_blank">
+              <img
+                src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cpgame2.png"
+                class="main-img"
+                alt="CoinCasino welcome offer"
+              />
+            </a>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2>How CoinCasino Works</h2>
+          <p>
+            Start playing and winning in just 3 simple steps — sign up, deposit,
+            and spin the most popular slots on the web.
+          </p>
+          <div class="games-grid">
+            <a href="{offer}" target="_blank">
+              <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cpgame6.png" alt="Slots" loading="lazy" />
+            </a>
+            <a href="{offer}" target="_blank">
+              <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cpgame1.png" alt="Roulette" loading="lazy" />
+            </a>
+            <a href="{offer}" target="_blank">
+              <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/cpgame2.png" alt="Blackjack" loading="lazy" />
+            </a>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2>Why CoinCasino is Your Best Bet</h2>
+          <h3>No App? No Problem.</h3>
+          <p>
+            Don't clutter your phone with extra icons. CoinCasino is built for
+            high-performance <b>Instant Web Play</b>.
+          </p>
+          <ul style="padding-left: 24px">
+            <li>
+              <b>Zero Clutter, Maximum Play:</b> Skip the download and keep
+              your phone free. Play instantly on any browser with our optimized
+              web platform.
+            </li>
+            <li>
+              <b>Seamless Browser Interface:</b> Experience lightning-fast
+              load times and a zero-lag interface, perfectly optimized for
+              Safari, Chrome, and Firefox.
+            </li>
+            <li>
+              <b>1000+ Casino Games:</b> Access hundreds of premium titles
+              directly from your browser — slots, live casino, and more.
+            </li>
+            <li>
+              <b>Trusted Payments:</b> Fast and secure deposits and
+              withdrawals via Visa, Mastercard, Apple Pay, Google Pay, Bitcoin,
+              and more.
+            </li>
+            <li>
+              <b>24/7 Live Support:</b> Our dedicated team is on standby
+              around the clock, ready to assist you whenever you need help.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section-block">
+          <h3>Trusted Payment Methods</h3>
+          <div class="payment-grid">
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/apple-Logo.png" alt="Apple Pay" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/739634aa29300f6a1b8d8f56e0a6e722e7b438e6/Google_Pay_Logo.png" alt="Google Pay" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/739634aa29300f6a1b8d8f56e0a6e722e7b438e6/Mastercard-logo.png" alt="Mastercard" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/739634aa29300f6a1b8d8f56e0a6e722e7b438e6/Visa-logo.svg.png" alt="Visa" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/739634aa29300f6a1b8d8f56e0a6e722e7b438e6/bitcoin-btc-logo.png" alt="Bitcoin" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/739634aa29300f6a1b8d8f56e0a6e722e7b438e6/ethereum-eth-logo.png" alt="Ethereum" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/tether-usdt-logo.png" alt="USDT" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/739634aa29300f6a1b8d8f56e0a6e722e7b438e6/solana-sol-logo.png" alt="Solana" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/bnb.png" alt="BNB" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/Circle_USDC_Logo.svg.png" alt="USDC" loading="lazy" />
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="list">
+            <h2>Claim Your Welcome Bonus!</h2>
+            <p>
+              <b
+                >Join the thousands of players already enjoying CoinCasino's
+                elite online casino experience.</b
+              >
+            </p>
+            <ul>
+              <li>
+                Click <a href="{offer}" target="_blank">Play Now</a> to join
+                CoinCasino instantly via your browser.
+              </li>
+              <li>
+                Claim your 200% bonus up to $30,000 + 150 free spins on sign-up.
+              </li>
+              <li>
+                Spin top slots, live tables, and more casino
+                games.
+              </li>
+              <li>
+                Deposit $10 or more and instantly receive your 200% bonus
+                plus free spins!
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="claimCoins">
+          <a class="claimLinkWrapper" target="_blank" href="{offer}">
+            <div class="claimCoinsContainer">
+              Claim $30,000 + 150 Free Spins
+            </div>
+          </a>
+        </div>
+
+        <div class="disclaimer text-center">
+          <h4><em>No Download Required. Play Instantly on the Web.</em></h4>
+          <p>
+            <b
+              >***Play responsibly. Must be 18+. Terms &amp; conditions apply.
+              Gambling can be addictive. Please play responsibly.</b
+            >
+          </p>
+        </div>
+
+        <div class="text-center">
+          <a href="{offer}" target="_blank" class="signup-btn">Join Now</a>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div class="footer-logo-wrapper">
+        <img
+          src="https://raw.githubusercontent.com/ejzurcaled29/assets/refs/heads/main/coincasino.png"
+          alt="CoinCasino"
+        />
+      </div>
+      <p class="footer-text">
+        CoinCasino is licensed to conduct online gaming operations by the
+        Union of the Comoros. Gambling can be addictive. Please play
+        responsibly. 18+ only. Terms and conditions apply.
+      </p>
+      <a href="{offer}" target="_blank"><p>Privacy Notice</p></a>
+      <a href="{offer}" target="_blank"><p>Terms of Service</p></a>
+      <p class="footer-copyright">© 2026 CoinCasino. All rights reserved.</p>
+    </div>
+  </body>
+</html>
